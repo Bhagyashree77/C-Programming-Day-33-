@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+int evensum(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    else
+    {
+        int even=(n*2);
+        return even+evensum(n-1);
+    }
+}
+main()
+{
+    int n,sum;
+    scanf("%d",&n);
+    sum=evensum(n);
+    printf("%d\n",sum);
+}
